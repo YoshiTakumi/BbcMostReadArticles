@@ -1,0 +1,12 @@
+.c-container {
+   /* border: 1px solid #d8dde6; */
+    margin: 0.5rem 2rem; 
+}
+
+.custom-url {
+    text-align: left;
+    background-color: #f4f6f9;
+    padding: 1rem;
+  
+    width: 100%;
+}

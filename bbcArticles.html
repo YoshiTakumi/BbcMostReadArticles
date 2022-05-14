@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Most Read Articles">
+        <template if:true={articles}>
+            <div class="c-container">
+                <lightning-layout horizontal-align="space" multiple-rows="true">
+
+                    <template for:each={articles} for:item="article">
+                        <lightning-layout-item size="12" padding="around-small" key={article.url}>
+                            <div class="slds-text-heading_small" >
+                                <a href={article.url} style="text-decoration: none;">
+                                    {article.number}. {article.text}
+                                </a>
+                            </div>
+                            
+                        </lightning-layout-item>
+                        
+                    </template>
+                  
+                </lightning-layout>
+            </div>
+            
+        </template>
+        <template if:false={articles}>
+            <div style="width: 100%; display: flex;">
+                <img style="margin: auto;" src={bbcDownUrl} alt="epic embed fail">
+            </div>
+        </template>
+    </lightning-card>
+  
+</template>
